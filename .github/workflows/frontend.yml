@@ -7,15 +7,14 @@ on:
     branches: [main, dev]
     paths: ["frontend/**"]
   workflow_dispatch:
- 
-defaults:
-  run:
-    working-directory: frontend
- 
+
 jobs:
   build-lint-test:
     name: "Build - Lint - Test"
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend # Solo se aplica aquí
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
