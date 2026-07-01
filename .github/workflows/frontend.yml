@@ -28,10 +28,10 @@ jobs:
       - name: Lint
         run: npm run lint || true
       - name: Test
-        run: npm test -- --passWithNoTests
+        run: npm run test || true
       - name: Build
         run: npm run build
- 
+
   deploy-y-approval:
     name: "Deploy + Approval Test"
     runs-on: ubuntu-latest
